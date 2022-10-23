@@ -21,7 +21,21 @@ eye_cascade = cv.CascadeClassifier(path + "haarcascade_eye.xml")
 os.chdir("images")
 contents = sorted(os.listdir())
 
+for image in contents:
+    print(f"\nFace detected...{datetime.now()}")
+    engine.say("This is a test audio for the text to speech library")
+    engine.runAndWait() #halts the programs execution and waits for the audio to finish
+    time.sleep(3)
 
+    img_gray = cv.imread(image, cv.IMREAD_GRAYSCALE) #converts the image to grayscale
+    h, w = img_gray.shape
+    #control - show the image before its face detection and wait for 2000ms
+    cv.imshow(f"Face detected {image}", img_gray)
+    cv.waitKey(2000)
+    cv.destroyWindow(f"Motion detected {image}")
+
+    face_list = [] #empty list to hold the faces detected
+    face_list.append(face_cascade.detectMultiScale(image=img_gray, scaleFactor=1.1, minNeihbors=1))
 
 
 
