@@ -10,10 +10,10 @@ engine.setProperty("rate", 145) #rate of the words (WPM)
 engine.setProperty("volume", 1.0) #1 is the max volume
 
 #path to pretrained haar casacade classifiers
-path = "C:\\Users\\Owner\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\cv2\\data"
+#path = "C:\\Users\\Owner\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\cv2\\data"
 
 #Loading classifiers and assigining them to variables
-face_cascade = cv.CascadeClassifier(cv.data.haarcascades + 'haarcascade_frontalface_default.xml')
+face_cascade = cv.CascadeClassifier(cv.data.haarcascades + 'haarcascade_frontalface_default.xml') #cv.data.haarcascades is the path
 eye_cascade = cv.CascadeClassifier(cv.data.haarcascades + "haarcascade_eye.xml")
 #Use addiditonal classifiers to identify profiles, smiles, glasses, etc.
 
