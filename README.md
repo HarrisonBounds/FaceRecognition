@@ -13,7 +13,7 @@ This project uses OpenCV to implement a face recognition system that captures fa
   - [3. Recognizing Faces](#3-recognizing-faces)
 - [Directory Structure](#directory-structure)
 - [Logging](#logging)
-- [License](#license)
+
 
 ## Features
 
@@ -33,7 +33,7 @@ This project uses OpenCV to implement a face recognition system that captures fa
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/yourusername/opencv-face-recognition.git
+   git clone https://github.com/HarrisonBounds/face-recognition.git
    cd opencv-face-recognition
    ```
 
@@ -47,13 +47,7 @@ This project uses OpenCV to implement a face recognition system that captures fa
 3. **Install Dependencies:**
 
    ```bash
-   pip install -r requirements.txt
-   ```
-
-   *If requirements.txt is not provided, install manually:*
-
-   ```bash
-   pip install opencv-python opencv-contrib-python numpy
+   pip install opencv-python  numpy
    ```
 
 ## Usage
@@ -66,7 +60,7 @@ The system comprises three main scripts:
 
 ### 1. Capturing Facial Images
 
-Use the wcapture_faces.pyw script to collect facial images for each user.
+Use the `capture_faces.py` script to collect facial images for each user.
 
 **Steps:**
 
@@ -89,17 +83,17 @@ Use the wcapture_faces.pyw script to collect facial images for each user.
 
 **Example Output:**
 
-``
+```
 Enter your name: Harrison
 Enter ID: 1
 
 Capturing face, look at the camera now!
 Image collection completed
-``
+```
 
 ### 2. Training the Recognizer
 
-After capturing images, train the recognizer using the wtrain_model.pyw script.
+After capturing images, train the recognizer using the `train_model.py` script.
 
 **Steps:**
 
@@ -130,7 +124,7 @@ Training Complete
 
 ### 3. Recognizing Faces
 
-Use the wrecognize_faces.pyw script to recognize and identify faces from images in the ./tester directory.
+Use the `recognize_faces.py` script to recognize and identify faces from images in the ./tester directory.
 
 **Steps:**
 
